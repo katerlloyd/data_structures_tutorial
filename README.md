@@ -10,7 +10,6 @@ Each module will contain descriptions and examples. At the end of each module, y
 ## Contact
 For questions or comments, please send them to:
 
-Kate Clark
-BYU-Idaho, CSE 212 Section 2
+Kate Clark | BYU-Idaho, CSE 212 Section 2
 
 [cla16022@byui.edu](cla16022@byui.edu)
