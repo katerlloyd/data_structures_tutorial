@@ -19,9 +19,9 @@ What kind of errors are common when using the data structure?
 ## Efficiency
 
 ## Example Problem
-After traveling for weeks the space station has finally come into sight! Man, if we mess up the docking phase... Well, let's just make sure that we don't. Good thing we made that list of spaceship docking steps! Now, how could we be sure that they would come out in the right order so we don't explode our new ship? We need a data structure that is ordered and lets us take out the information in a certain order. A stack should do the trick!
+After traveling for weeks the space station has finally come into sight! Man, if we mess up the docking phase... Well, let's just make sure that we don't. Good thing we have a list of spaceship docking steps! Now, how could we be sure that they would come out in the right order so we don't explode our new ship? We need a data structure that is ordered and lets us take out the information in a certain order. A stack should do the trick!
 
-We will start with an empty list (stack) to create a docking procedure with. Because a stack allows us to take out the data in the opposite order that we put them in, we will be adding the steps in from the `docking_steps` lists starting with the last step first.
+We will start with an empty list (stack) to create a docking procedure with. Because a stack allows us to take out the data in the opposite order that we put them in, we will be adding in the steps starting with the last step first.
 
 ```python
 docking_procedure = []
@@ -46,16 +46,24 @@ print("Docking Complete")
 
 ## Problem to Solve
 
-You have delivered all of your cargo to the space station and your mission is halfway done. All you need to do now is get back home safely. Unfortunately, they forgot to tell you which launch code to use to reverse the direction you are going. Thankfully, the boss called in and told you that he wants you to use the most recent even launch code that was created and punch it in. But how can we know which one that was? With a stack we can remove the last item from the list and display it on the screen. Your mission is to get the launch code without exploding the ship.
+You have delivered all of your cargo to the space station and your mission is halfway done. All you need to do now is get back home safely. Unfortunately, they forgot to tell you which launch code to use to reverse the direction you are going. Thankfully, the boss called in and told you that he wants you to use the most recent **even** launch code that was created and punch it in. But how can we know which one that was? With a stack we can remove the last item from the list and display it on the screen. Your mission is to get the launch code without exploding the ship.
+
+The starting code for your mission is in [launch_codes.py](https://github.com/katereclark/data_structures_tutorial/blob/main/launch_codes.py), or you can copy and paste the code below. Once you are ready, you can check the answer here in the [solution code](https://github.com/katereclark/data_structures_tutorial/blob/main/launch_codes_solution.py).
 
 ```python
 import random
 
 launch_codes = ["45923", "12281", "70024", "34975", "20912", "54557", "71233", "62841"]
 
+# Finds the most recent even launch code.
+def determine_correct_launch_code(launch_codes):
+  for code in reversed(launch_codes):
+    if int(code) % 2 == 0:
+      return code
+
 print("Find the right code using the commands below.")
-print("1. Push - select and add random code")
-print("2. Pop - select and remove code")
+print("1. Push   - select and add random code")
+print("2. Pop    - select and remove code")
 print("3. Launch - use selected code")
 print("4. Give up for now")
 
@@ -64,30 +72,30 @@ command = input("> ")
 
 while command != "4":
   correct_code = determine_correct_launch_code(launch_codes)
+  # Adds a random launch code to the stack.
   if command == "1":
     code = str(random.randint(10000, 99999))
-    launch_codes.append(code)
+
+    # TODO: Push the code to the back of the launch_codes list.
+
     print("Random launch code added")
     print(f"Selected launch code: {code}")
     correct_code = determine_correct_launch_code(launch_codes)
     command = input("> ")
+  # Removes and selects the last launch code from the stack.
   elif command == "2":
-    code = launch_codes.pop()
+    
+    # TODO: Pop the code from the back of the launch_codes list and select the code.
+
     print(f"Selected launch code: {code}")
     command = input("> ")
+  # Checks if the launch codes match.
   elif command == "3":
     if code == correct_code:
       print("Launch successful!")
     else:
       print("Aaaaand now we're dead!")
     break
-
-  def determine_correct_launch_code(launch_codes):
-    for code in reversed(launch_codes):
-      if int(code) % 2 == 0:
-        return code
-      else:
-        continue
 ```
 
 [Back to Welcome Page](https://github.com/katereclark/data_structures_tutorial/blob/main/0-welcome.md)
