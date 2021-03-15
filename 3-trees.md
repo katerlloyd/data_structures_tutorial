@@ -1,6 +1,6 @@
 # Trees
 
-## Introduction and uses
+## Introduction and Uses
 
 What is the purpose of the data structure?
 
