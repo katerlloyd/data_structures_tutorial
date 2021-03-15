@@ -19,7 +19,7 @@ What kind of errors are common when using the data structure?
 ## Efficiency
 
 ## Example Problem
-After traveling for weeks the space station has finally come into sight! Man, if we mess up the docking phase... Well, let's just make sure that we don't. Good thing we made that list of spaceship docking steps! Now, how could we be sure that they would come out in the right order so we don't expload our new ship? We need a data structure that is ordered and lets us take out the information in a certain order. A stack should do the trick!
+After traveling for weeks the space station has finally come into sight! Man, if we mess up the docking phase... Well, let's just make sure that we don't. Good thing we made that list of spaceship docking steps! Now, how could we be sure that they would come out in the right order so we don't explode our new ship? We need a data structure that is ordered and lets us take out the information in a certain order. A stack should do the trick!
 
 We will start with an empty list (stack) to create a docking procedure with. Because a stack allows us to take out the data in the opposite order that we put them in, we will be adding the steps in from the `docking_steps` lists starting with the last step first.
 
@@ -51,7 +51,8 @@ You have delivered all of your cargo to the space station and your mission is ha
 ```python
 import random
 
-launch_codes = ["45923", "12281", "70024", "34975", "20912", "54550", "71236", "62841"]
+launch_codes = ["45923", "12281", "70024", "34975", "20912", "54557", "71233", "62841"]
+correct_code = "20912"
 
 print("Find the right code using the commands below.")
 print("1. Push - add random code")
@@ -65,7 +66,7 @@ while command != 4:
   if command == "1":
     random_code = random.randint(10000, 99999)
     launch_codes.push(random_code)
-    print("Random launch coded added")
+    print("Random launch code added")
   elif command == "2":
     code = launch_codes.pop()
     print(f"Selected launch code: {code}")
@@ -73,7 +74,7 @@ while command != 4:
     if code == correct_code:
       print("Launch successful!")
     else:
-      print("Aaaaand now we're dead!
+      print("Aaaaand now we're dead!")
     break
 ```
 
