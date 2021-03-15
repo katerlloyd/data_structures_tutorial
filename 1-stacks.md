@@ -75,9 +75,13 @@ while command != "4":
     launch_codes.push(code)
     print("Random launch code added")
     print(f"Selected launch code: {code}")
+    command = input("> ")
+    break
   elif command == "2":
     code = launch_codes.pop()
     print(f"Selected launch code: {code}")
+    command = input("> ")
+    break
   elif command == "3":
     if code == correct_code:
       print("Launch successful!")
