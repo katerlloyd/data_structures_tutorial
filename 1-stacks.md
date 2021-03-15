@@ -55,7 +55,7 @@ launch_codes = ["45923", "12281", "70024", "34975", "20912", "54557", "71233", "
 
 def determine_correct_launch_code(launch_codes):
   for code in reversed(launch_codes):
-    if code % 2 == 0:
+    if int(code) % 2 == 0:
       return code
     else:
       continue
@@ -68,7 +68,7 @@ print("4. Give up for now")
 
 command = input("> ")
 
-while command != 4:
+while command != "4":
   correct_code = determine_correct_launch_code(launch_codes)
   if command == "1":
     code = random.randint(10000, 99999)
