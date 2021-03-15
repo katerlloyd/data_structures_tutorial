@@ -46,16 +46,22 @@ print("Docking Complete")
 
 ## Problem to Solve
 
-You have delivered all of your cargo to the space station and your mission is halfway done. All you need to do now is get back home safely. Unfortunately, they forgot to tell you which launch code to use to reverse the direction you are going. Thankfully, the boss called in and told you that he wants you to use the most recent even launch code that was created and punch it in. But how can we know which one that was? With a stack we can grab the last item from the list and display it on the screen. Your mission is to get the launch code without exploding the ship.
+You have delivered all of your cargo to the space station and your mission is halfway done. All you need to do now is get back home safely. Unfortunately, they forgot to tell you which launch code to use to reverse the direction you are going. Thankfully, the boss called in and told you that he wants you to use the most recent even launch code that was created and punch it in. But how can we know which one that was? With a stack we can remove the last item from the list and display it on the screen. Your mission is to get the launch code without exploding the ship.
 
 ```python
 import random
 
 launch_codes = ["45923", "12281", "70024", "34975", "20912", "54557", "71233", "62841"]
-correct_code = "20912"
+
+def determine_correct_launch_code(launch_codes):
+  for code in reversed(launch_codes):
+    if code % 2 == 0:
+      return code
+    else:
+      continue
 
 print("Find the right code using the commands below.")
-print("1. Push - add random code")
+print("1. Push - select and add random code")
 print("2. Pop - select and remove code")
 print("3. Launch - use selected code")
 print("4. Give up for now")
@@ -63,10 +69,12 @@ print("4. Give up for now")
 command = input("> ")
 
 while command != 4:
+  correct_code = determine_correct_launch_code(launch_codes)
   if command == "1":
-    random_code = random.randint(10000, 99999)
-    launch_codes.push(random_code)
+    code = random.randint(10000, 99999)
+    launch_codes.push(code)
     print("Random launch code added")
+    print(f"Selected launch code: {code}")
   elif command == "2":
     code = launch_codes.pop()
     print(f"Selected launch code: {code}")
