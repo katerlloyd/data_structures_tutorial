@@ -8,7 +8,7 @@ Welcome to the Data Structures Tutorial. Every programmer should understand thes
 Each module will contain descriptions and examples. At the end of each module, you will find a problem to solve on your own. You should only look at the solution after you have attempted to solve the problem first.
 
 ## Big O Notation
-Before you take a look at each of these data structures, however, it is important to understand how they differ in efficiency from each other when used. Big O notation is used to determine the performance or efficiency of an algorithm or parts of an algorithm. There are generally five levels of efficiency. When listed from the most effiecient to the least efficient, they are: O(1), O(log n), O(n), O(n log n), and O(n<sup>2</sup>). 
+Before you take a look at each of these data structures, however, it is important to understand how they differ in efficiency from each other when used. Big O notation is used to determine the performance or efficiency of an algorithm or parts of an algorithm. There are generally five levels of efficiency. When listed from the best performance to the worst performance, they are: O(1), O(log n), O(n), O(n log n), and O(n<sup>2</sup>). 
 
 ### O(1)
 This is called constant time, meaning that the ____.
