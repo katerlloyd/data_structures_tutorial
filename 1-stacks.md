@@ -34,7 +34,7 @@ docking_procedure.append("2. Line up with space station docking platform")
 docking_procedure.append("1. Maintain orbit with space station")
 ```
 
-Now that the steps have all been added, we can remove them once they have been completed and stop once the stack is empty.
+Now that the steps have all been added, we can remove them once they have been completed and stop once the stack is empty and there is nothing left to do.
 
 ```python
 while len(docking_procedure) != 0:
@@ -45,6 +45,14 @@ print("Docking Complete")
 ```
 
 ## Problem to Solve
-spaceship launch codes - boss told you that he wants you to use the most recent one that was created and put in. how can we know which one that was?
+
+You have delivered all of your cargo to the space station and your mission is halfway done. All you need to do now is get back home safely. Unfortunately, they forgot to tell you which launch code to use to reverse the direction you are going. Thankfully, the boss called in and told you that he wants you to use the most recent launch code that was created and punch it in. But how can we know which one that was? With a stack we can grab the last item from the list and display it on the screen. Your mission is to get the launch code before any more launch codes are added.
+
+```python
+launch_codes = ["45923", "12281", "70024", "34975", "20912", "54550", "71236", "62841"]
+
+code = launch_codes.pop()
+print(code)
+```
 
 [Back to Welcome Page](https://github.com/katereclark/data_structures_tutorial/blob/main/0-welcome.md)
