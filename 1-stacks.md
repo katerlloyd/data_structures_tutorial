@@ -48,7 +48,7 @@ print("Docking Complete")
 
 You have delivered all of your cargo to the space station and your mission is halfway done. All you need to do now is get back home safely. Unfortunately, they forgot to tell you which launch code to use to reverse the direction you are going. Thankfully, the boss called in and told you that he wants you to use the most recent **even** launch code that was created and punch it in. But how can we know which one that was? With a stack we can remove the last item from the list and display it on the screen. Your mission is to get the launch code without exploding the ship.
 
-The starting code for your mission is in [launch_codes.py](https://github.com/katereclark/data_structures_tutorial/blob/main/launch_codes.py), or you can copy and paste the code below. Once you are ready, you can check the answer here in the [solution code](https://github.com/katereclark/data_structures_tutorial/blob/main/launch_codes_solution.py).
+Look here at the [starting code](https://github.com/katereclark/data_structures_tutorial/blob/main/launch_codes.py) to begin your mission, or you can copy and paste the code below. Once you are ready, you can check the answer here in the [solution code](https://github.com/katereclark/data_structures_tutorial/blob/main/launch_codes_solution.py).
 
 ```python
 import random
