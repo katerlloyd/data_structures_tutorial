@@ -14,8 +14,7 @@ In Python, `pushing` is accomplished by writing `array.append(value)`. `Popping`
 
 `numbers = []`
 
-#
-**Push 3** 
+### Push 3
 | 3 |  |  |  |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
