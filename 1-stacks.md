@@ -22,7 +22,7 @@ In Python, `pushing` is accomplished by writing `array.append(value)`. `Popping`
 | :------ | :-------- | :-------- | :------ |
 |                                           |
 
-#### Push 2
+**Push 2**
 | 3 | 5 | 2 |  |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
@@ -38,41 +38,6 @@ numbers = []
 numbers.append(3)
 numbers.append(5)
 numbers.append(2)
-numbers.pop()
-```
-
-
-`numbers = []`
-
-#### Push 3
-| 3 |  |  |  |
-| :------ | :-------- | :-------- | :------ |
-|                                           |
-```python
-numbers.append(3)
-```
-#
-#### Push 5
-| 3 | 5 |  |  |
-| :------ | :-------- | :-------- | :------ |
-|                                           |
-```python
-numbers.append(5)
-```
-#
-#### Push 2
-| 3 | 5 | 2 |  |
-| :------ | :-------- | :-------- | :------ |
-|                                           |
-```python
-numbers.append(2)
-```
-#
-#### Pop
-| 3 | 5 |  |  |
-| :------ | :-------- | :-------- | :------ |
-|                                           |
-```python
 numbers.pop()
 ```
 #
