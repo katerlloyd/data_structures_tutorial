@@ -1,36 +1,14 @@
 # Stacks
 
-## Introduction and Uses
-
 A stack is a data structure that uses the first in last out method. This means that the first item added to the array will be the last one to be taken out of the array. Adding an item to the array will always put it at the very end and is called `pushing`. Removing and returning something from the array also will happen at the very end and is called `popping`. This can be compared to a stack of pancakes. The first pancake that you `push` or add onto the stack will be the last to be `popped` or removed from the stack. A stack is an ordered and changeable list. 
 
-The purpose of a stack is to track the history of data input into the array. A stack can be used to solve many different problems in various situations since the items it contains will be stored in a certain order. Some of these include adding the capacity to undo an action and remembering the history of what was added or typed. One very common  use of a stack is in the functionality of a call or function stack. This is used in debugging and displaying terminal error messages.
-
 ![pancakes](pancakes.png)
+
+The purpose of a stack is to track the history of data input into the array. A stack can be used to solve many different problems in various situations since the items it contains will be stored in a certain order. Some of these include adding the capacity to undo an action and remembering the history of what was added or typed. One very common  use of a stack is in the functionality of a call or function stack. This is used in debugging and displaying terminal error messages.
 
 ## Important Concepts
 
 In Python, `pushing` is accomplished by writing `array.append(value)`. `Popping` is done by writing `array.pop()`. To check the size of the array write `len(array)`.
-
-#### Push 3
-| 3 |  |  |  |
-| :------ | :-------- | :-------- | :------ |
-|                                           |
-
-#### Push 5
-| 3 | 5 |  |  |
-| :------ | :-------- | :-------- | :------ |
-|                                           |
-
-**Push 2**
-| 3 | 5 | 2 |  |
-| :------ | :-------- | :-------- | :------ |
-|                                           |
-
-#### Pop
-| 3 | 5 |  |  |
-| :------ | :-------- | :-------- | :------ |
-|                                           |
 
 ```python
 numbers = []
@@ -40,6 +18,27 @@ numbers.append(5)
 numbers.append(2)
 numbers.pop()
 ```
+
+**Push 3**
+| 3 |  |  |  |
+| :------ | :-------- | :-------- | :------ |
+|                                           |
+
+**Push 5**
+| 3 | 5 |  |  |
+| :------ | :-------- | :-------- | :------ |
+|                                           |
+
+**Push 2**
+| 3 | 5 | 2 |  |
+| :------ | :-------- | :-------- | :------ |
+|                                           |
+
+**Pop**
+| 3 | 5 |  |  |
+| :------ | :-------- | :-------- | :------ |
+|                                           |
+
 #
 Some common errors that are made when utilizing stacks are `popping` something off of an empty stack or not `pushing` the items onto the stack in the right order, like reversing the order that something should go in for example. Another mistake might be getting the front and the back of the stack mixed up. Items are always `pushed` to and `popped` from the back.                           |
 
