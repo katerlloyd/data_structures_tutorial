@@ -39,7 +39,7 @@ Some common errors that are made when utilizing stacks are `popping` something o
 
 | 3 | 5 | 2 | 4 | 0 | 7 |
 | :------: | :--------: | :--------: | :------: | :------: | :------: |
-| Front ||||| Back |
+| **Front** ||||| **Back** |
 
 ## Efficiency
 
