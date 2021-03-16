@@ -16,7 +16,7 @@ Before you take a look at each of these data structures, however, it is importan
 
 **O(n)** is called linear time. This means that as the size of the data (n) increases, the performance decreases at the same rate. This code usually has one loop that is based on the size of the data.
 
-**O(n log n)** is called n log n time, coincidentally. This code usually uses an O(log n) algorithm combined with an O(n) algorithm, like a an O(n) loop inside of an O(log n) loop or vice versa.
+**O(n log n)** is called n log n time, coincidentally. This code usually uses an O(log n) algorithm combined with an O(n) algorithm, like an O(n) loop inside of an O(log n) loop or vice versa.
 
 **O(n<sup>2</sup>)** is called polynomial time. This is the worst of the efficiency levels and should be avoided whenever possible. This code usually has one loop inside of another loop. If there were three nested loops, then this could be O(n<sup>2</sup>) efficiency.
 
