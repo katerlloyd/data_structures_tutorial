@@ -13,6 +13,7 @@ What kind of problems can be solved using the data structure?
 How would the data structure be used in Python (in some cases you will need to discuss recursion)?
 
 What kind of errors are common when using the data structure?
+![pancakes](pancakes.png)
 
 ## Important Concepts
 
