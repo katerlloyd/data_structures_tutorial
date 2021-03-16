@@ -2,6 +2,8 @@
 
 ## Introduction and Uses
 
+Detailed and organized coverage of the topic with documentation including (but not limited to) example Python code, diagrams, and tables.
+
 What is the purpose of the data structure?
 
 What is the performance of the data structure (you will need to talk about big O notation)?
