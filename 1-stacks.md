@@ -2,17 +2,15 @@
 
 ## Introduction and Uses
 
-Detailed and organized coverage of the topic with documentation including (but not limited to) example Python code, diagrams, and tables.
+Detailed and organized coverage of the topic with documentation including diagrams
 
 What is the purpose of the data structure?
-
-What is the performance of the data structure (you will need to talk about big O notation)?
 
 What kind of problems can be solved using the data structure?
 
 How would the data structure be used in Python (in some cases you will need to discuss recursion)?
 
-What kind of errors are common when using the data structure?
+Common Errors
 
 ![pancakes](pancakes.png)
 
@@ -20,7 +18,7 @@ What kind of errors are common when using the data structure?
 
 ## Efficiency
 | Stack Operation | Code | Performance | Description |
-|:---: | :---: | :---: | :---: |
+| :---: | :---: | :---: | :---: |
 | Push | stack.append(value) | O(1) | Add to end of array |
 | Pop | value = stack.pop() | O(1) | Remove from end of array |
 | Size | length = len(stack) | O(1) | Size of array |
