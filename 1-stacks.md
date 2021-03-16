@@ -8,7 +8,7 @@ The purpose of a stack is to track the history of data input into the array. A s
 
 ## Important Concepts
 
-In Python, `pushing` is accomplished by writing `array.append(value)`. `Popping` is done by writing `array.pop()`. To check the size of the array write `len(array)`.
+In Python, a stack is represented by a list. `Pushing` is accomplished by writing `array.append(value)`. `Popping` is done by writing `array.pop()`. To check the size of the array write `len(array)`.
 
 ```python
 numbers = []
