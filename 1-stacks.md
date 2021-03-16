@@ -19,7 +19,7 @@ numbers.append(2) # Pushes 2 onto the end.
 numbers.pop() # Pops 2 from the end.
 ```
 
-| *Numbers*|||||
+| Empty |||||
 | :------: | :------ | :-------- | :-------- | :------ |
 | **Push 3** | 3 |  |  |  |                                        
 | **Push 5** | 3 | 5 |  |  |
