@@ -14,23 +14,19 @@ What kind of problems can be solved using the data structure? undo functionality
 
 In Python, `pushing` is accomplished by writing `array.append(value)`. `Popping` is done by writing `array.pop()`. To check the size of the array write `len(array)`.
 
-```python
-numbers = []
-numbers.append(3)
-```
+`numbers = []`
 
+`numbers.append(3)`
 | 3 |  |  |  |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
 
 `numbers.append(5)`
-
 | 3 | 5 |  |  |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
 
 `numbers.append(2)`
-
 | 3 | 5 | 2 |  |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
