@@ -16,22 +16,22 @@ In Python, `pushing` is accomplished by writing `array.append(value)`. `Popping`
 
 `numbers = []`
 
-`numbers.append(3)`
+**Push 3**`numbers.append(3)`
 | 3 |  |  |  |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
 
-`numbers.append(5)`
+**Push 5** `numbers.append(5)`
 | 3 | 5 |  |  |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
 
-`numbers.append(2)`
+**Push 2** `numbers.append(2)`
 | 3 | 5 | 2 |  |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
 
-`numbers.pop()`
+**Pop** `numbers.pop()`
 | 3 | 5 |  |  |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
