@@ -13,28 +13,24 @@ In Python, `pushing` is accomplished by writing `array.append(value)`. `Popping`
 ```python
 numbers = []
 
-numbers.append(3)
-numbers.append(5)
-numbers.append(2)
-numbers.pop()
+numbers.append(3) # Pushes 3 onto the end
+numbers.append(5) # Pushes 5 onto the end
+numbers.append(2) # Pushes 2 onto the end
+numbers.pop() # Pops 2 from the end
 ```
 
-**Push 3**
 | 3 |  |  |  |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
 
-**Push 5**
 | 3 | 5 |  |  |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
 
-**Push 2**
 | 3 | 5 | 2 |  |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
 
-**Pop**
 | 3 | 5 |  |  |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
