@@ -2,37 +2,46 @@
 
 ## Introduction and Uses
 
-Detailed and organized coverage of the topic with documentation including diagrams
+A stack is a data structure that uses the first in last out method. This means that the first item added to the array will be the last one to be taken out of the array. Adding an item to the array will always put it at the very end and is called `pushing`. Removing and returning something from the array also will happen at the very end and is called `popping`. This can be compared to a stack of pancakes. The first pancake that you `push` or add onto the stack will be the last to be `popped` or removed from the stack. A stack is an ordered and changeable list. 
 
-What is the purpose of the data structure?
+The purpose of a stack is to track the history of data input into the array. A stack can be used for many different opperations. 
 
 What kind of problems can be solved using the data structure? undo functionality, remember history of what was added or typed, call stacks when programming and debugging (terminal error messages)
-
-How would the data structure be used in Python?
-
-Common Errors
-
-A stack is a data structure that uses the first in last out method. This means that the first item added to the array will be the last one to be taken out of the array. Adding an item to the array will always put it at the very end and is called `pushing`. Removing and returning something from the array also will happen at the very end and is called `popping`. This can be compared to a stack of pancakes. The first pancake that you `push` or add onto the stack will be the last to be `popped` or removed from the stack.
-
-A stack can be used for many different opperations, like ____.
-
-| 3 |  |  |  |
-| :------ | :-------- | :-------- | :------ |
-|                                           |
-
-| 3 | 5 |  |  |
-| :------ | :-------- | :-------- | :------ |
-|                                           |
-
-| 3 | 5 | 2 |  |
-| :------ | :-------- | :-------- | :------ |
-|                                           |
 
 ![pancakes](pancakes.png)
 
 ## Important Concepts
 
+In Python, `pushing` is accomplished by writing `array.append(value)`. `Popping` is done by writing `array.pop()`. To check the size of the array write `len(array)`.
+
+```python
+numbers = []
+
+numbers.append(3)```
+| 3 |  |  |  |
+| :------ | :-------- | :-------- | :------ |
+|                                           |
+
+`numbers.append(5)`
+| 3 | 5 |  |  |
+| :------ | :-------- | :-------- | :------ |
+|                                           |
+
+`numbers.append(2)`
+| 3 | 5 | 2 |  |
+| :------ | :-------- | :-------- | :------ |
+|                                           |
+
+`numbers.pop()`
+| 3 | 5 |  |  |
+| :------ | :-------- | :-------- | :------ |
+|                                           |
+
+
+Common Errors
+
 ## Efficiency
+
 | Stack Operation | Code | Performance | Description |
 | :---: | :---: | :---: | :---: |
 | Push | stack.append(value) | O(1) | Add to end of array |
@@ -41,6 +50,7 @@ A stack can be used for many different opperations, like ____.
 | Empty | if len(stack) == 0 | O(1) | Check if size of array is empty | 
 
 ## Example Problem
+
 After traveling for weeks the space station has finally come into sight! Man, if we mess up the docking phase... Well, let's just make sure that we don't. Good thing we have a list of spaceship docking steps! Now, how could we be sure that they would come out in the right order so we don't explode our new ship? We need a data structure that is ordered and lets us take out the information in a certain order. A stack should do the trick!
 
 We will start with an empty list (stack) to create a docking procedure with. Because a stack allows us to take out the data in the opposite order that we put them in, we will be adding in the steps starting with the last step first.
