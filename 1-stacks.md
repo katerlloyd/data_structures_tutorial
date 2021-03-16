@@ -37,7 +37,7 @@ In Python, `pushing` is accomplished by writing `array.append(value)`. `Popping`
 
 Some common errors that are made when utilizing stacks are `popping` something off of an empty stack or not `pushing` the items onto the stack in the right order, like reversing the order that something should go in for example. Another mistake might be getting the front and the back of the stack mixed up. Items are always `pushed` to and `popped` from the back.
 
-**Front _______ Back**
+**Front ========= Back**
 | 3 | 5 | 2 | 4 |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
