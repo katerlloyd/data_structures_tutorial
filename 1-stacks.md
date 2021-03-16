@@ -15,17 +15,17 @@ In Python, `pushing` is accomplished by writing `array.append(value)`. `Popping`
 `numbers = []`
 
 **Push 3** `numbers.append(3)`
-| <span style="color:red">3</span> |  |  |  |
+| 3 |  |  |  |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
 
 **Push 5** `numbers.append(5)`
-| 3 | <span style="color:orange">5</span> |  |  |
+| 3 | 5 |  |  |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
 
 **Push 2** `numbers.append(2)`
-| 3 | 5 | <span style="color:orange">2</span> |  |
+| 3 | 5 | 2 |  |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
 
@@ -37,7 +37,7 @@ In Python, `pushing` is accomplished by writing `array.append(value)`. `Popping`
 
 Some common errors that are made when utilizing stacks are `popping` something off of an empty stack or not `pushing` the items onto the stack in the right order, like reversing the order that something should go in for example. Another mistake might be getting the front and the back of the stack mixed up. Items are always `pushed` to and `popped` from the back.
 
-**Front ................. Back**
+**<span style="color:orange">Front ................. Back</span>**
 | 3 | 5 | 2 | 4 |
 | :------ | :-------- | :-------- | :------ |
 |                                           |
