@@ -22,7 +22,7 @@ Common Errors
 | Push | stack.append(value) | O(1) | Add to end of array |
 | Pop | value = stack.pop() | O(1) | Remove from end of array |
 | Size | length = len(stack) | O(1) | Size of array |
-| Empty | if len(stack) == 0 | O(1) | Check size of array | 
+| Empty | if len(stack) == 0 | O(1) | Check if size of array is empty | 
 
 ## Example Problem
 After traveling for weeks the space station has finally come into sight! Man, if we mess up the docking phase... Well, let's just make sure that we don't. Good thing we have a list of spaceship docking steps! Now, how could we be sure that they would come out in the right order so we don't explode our new ship? We need a data structure that is ordered and lets us take out the information in a certain order. A stack should do the trick!
