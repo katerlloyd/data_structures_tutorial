@@ -13,28 +13,18 @@ In Python, `pushing` is accomplished by writing `array.append(value)`. `Popping`
 ```python
 numbers = []
 
-numbers.append(3) # Pushes 3 onto the end
-numbers.append(5) # Pushes 5 onto the end
-numbers.append(2) # Pushes 2 onto the end
-numbers.pop() # Pops 2 from the end
+numbers.append(3) # Pushes 3 onto the end.
+numbers.append(5) # Pushes 5 onto the end.
+numbers.append(2) # Pushes 2 onto the end.
+numbers.pop() # Pops 2 from the end.
 ```
 
-| Push 3 | 3 |  |  |  |
+| *Numbers*|||||
 | :------: | :------ | :-------- | :-------- | :------ |
-|                                           |
-
-| Push 5 | 3 | 5 |  |  |
-| :------: | :------ | :-------- | :-------- | :------ |
-|                                           |
-
+| **Push 3** | 3 |  |  |  |                                        
+| **Push 5** | 3 | 5 |  |  |
 | **Push 2** | 3 | 5 | 2 |  |
-| :------: | :------ | :-------- | :-------- | :------ |
-|                                           |
-
-| *Pop* | 3 | 5 |  |  |
-| :------: | :------ | :-------- | :-------- | :------ |
-|                                           |
-
+| **Pop** | 3 | 5 |  |  |
 
 Some common errors that are made when utilizing stacks are `popping` something off of an empty stack or not `pushing` the items onto the stack in the right order, like reversing the order that something should go in for example. Another mistake might be getting the front and the back of the stack mixed up. Items are always `pushed` to and `popped` from the back.                           |
 
