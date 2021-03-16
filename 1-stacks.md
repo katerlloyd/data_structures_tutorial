@@ -4,9 +4,7 @@
 
 A stack is a data structure that uses the first in last out method. This means that the first item added to the array will be the last one to be taken out of the array. Adding an item to the array will always put it at the very end and is called `pushing`. Removing and returning something from the array also will happen at the very end and is called `popping`. This can be compared to a stack of pancakes. The first pancake that you `push` or add onto the stack will be the last to be `popped` or removed from the stack. A stack is an ordered and changeable list. 
 
-The purpose of a stack is to track the history of data input into the array. A stack can be used for many different opperations. 
-
-What kind of problems can be solved using the data structure? undo functionality, remember history of what was added or typed, call stacks when programming and debugging (terminal error messages)
+The purpose of a stack is to track the history of data input into the array. A stack can be used to solve many different problems in various situations since the items it contains will be stored in a certain order. Some of these include adding the capacity to undo an action and remembering the history of what was added or typed. One very common  use of a stack is in the functionality of a call or function stack. This is used in debugging and displaying terminal error messages.
 
 ![pancakes](pancakes.png)
 
@@ -37,7 +35,13 @@ In Python, `pushing` is accomplished by writing `array.append(value)`. `Popping`
 |                                           |
 
 
-Common Errors
+Some common errors that are made when utilizing stacks are `popping` something off of an empty stack or not `pushing` the items onto the stack in the right order, like reversing the order that something should go in for example. Another mistake might be getting the front and the back of the stack mixed up.
+
+`v` Front
+| 3 | 5 | 2 |  |
+| :------ | :-------- | :-------- | :------ |
+|                                           |
+             Back `^`
 
 ## Efficiency
 
