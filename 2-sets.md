@@ -2,11 +2,7 @@
 
 ## Introduction and Uses
 
-A set is a data structure where the order of the items inside is not important and each item in the set must be unique. This means that a set cannot contain duplicates and is very efficient when it comes to determining whether an item is in the set. Sets can be used for a variety of things in Python, but some of the most common include 
-
-What is the purpose of the data structure?
-What kind of problems can be solved using the data structure?
-How would the data structure be used in Python?
+A set is a data structure where the order of the items inside is not important and each item in the set must be unique. This means that a set cannot contain duplicates and is very efficient when it comes to determining whether an item is in the set. Sets can be used for a variety of things in Python, but some of the most common include situations where a fast lookup is vary valuable, when you want to make completely sure that there won't be any duplicates at all in your data, and when you want to merge data together (merge two sets together) into one.
 
 ## Important Concepts
 
@@ -27,6 +23,8 @@ But what if we also wanted to add the number 4 to the set? This would create wha
 One common error that can be made when working with sets is trying to hash a list, which cannot be done. 
 
 ## Efficiency
+
+These performance levels may become O(n) in a worst case scenario but are O(1) in most situations. 
 
 | Set Operation | Code | Performance | Description |
 | :---: | :---: | :---: | :---: |
