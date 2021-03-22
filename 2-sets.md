@@ -2,7 +2,7 @@
 
 ## Introduction and Uses
 
-A set is a data structure where the order of the items inside is not important and each item in the set must be unique. This means that a set cannot contain duplicates and is very efficient when it comes to determining whether an item is in the set. Sets can be used for a variety of things in Python, but some of the most common include situations where a fast lookup is vary valuable, when you want to make completely sure that there won't be any duplicates at all in your data, and when you want to merge data together (merge two sets together) into one. 
+A set is a data structure where the order of the items inside is not important and each item in the set must be unique. This means that a set cannot contain duplicates and is very efficient when it comes to determining whether an item is in the set. Sets can be used for a variety of things in Python, but some of the most common include situations where a fast lookup is vary valuable, when you want to make completely sure that there won't be any duplicates at all in your data or results, and when you want to merge data together (merge two sets together) into one or find which items are the same in both sets. 
 
 If we have two sets that we want to merge, we can use the `union` function in Python. 
 
@@ -48,11 +48,11 @@ There is a better way. This second option is called chaining. This method tells 
 | :------: | :------: | :------: | :------: | :------: |  :------: |  :------: |
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
 
-One common error that can be made when working with sets is trying to hash a list, which cannot be done. 
+One common error that can be made when working with sets is trying to hash a list or a dictionary, which cannot be done since they are both mutable or changeable data structures and cannot be hashed. Some other errors are trying to remove an items from a set that is not actually contained in the set or trying to change an item that has already been placed in a set. You cannot change an item once it has been added to the set since they are immutable or unchangeable.
 
 ## Efficiency
 
-These performance levels may become O(n) in a worst case scenario but are O(1) in most situations. 
+These performance levels depends on the hashing and may become O(n) in a worst case scenario but are O(1) in most situations. 
 
 | Set Operation | Code | Performance | Description |
 | :---: | :---: | :---: | :---: |
