@@ -64,6 +64,7 @@ These performance levels depends on the hashing and may become O(n) in a worst c
 
 | Set Operation | Code | Performance | Description |
 | :---: | :---: | :---: | :---: |
+| New Set | set = set() | O(1) | Create empty set |
 | Add | set.add(value) | O(1) | Add value to set |
 | Remove | set.remove(value) | O(1) | Remove value from set |
 | Size | length = len(set) | O(1) | Size of set |
@@ -71,13 +72,20 @@ These performance levels depends on the hashing and may become O(n) in a worst c
 
 ## Example Problem
 
-... To do this, we need to create an empty set. In Python, a set is made by writing `set_name = set()`.
+```python
+rocket_ship_models = ["W-19 Pegasus", "X-98 Jet", "L-75 Titan", "R-26 Surveyor", "W-19 Pegasus", "T-13 Lander", "D-47 Echo", "L-74 Titan", "L-75 Titan"]
+```
 
-rocket_ship_models = ["W-19 Pegasus", "X-98 Megaship", "L-75 Titan", "R-26 Surveyer", "W-19 Pegaus", "T-13 Lander", "D-47 Schmidt", "L-74 Titan", "L-75 Titan"]
+Oh no! The list they gave us has duplicate rocket ship models in it and now the sytem thinks that there are more models than there really are! How do we fix it? We could use a set since it can only contains unique values. This will also give us a much quicker of looking up the models too! To create an empty set we would use `set()`, but this time we want to turn the list into a set to get rid of any duplicate values.
 
-oh no! the list they gave us has duplicate rocket ship models and now the sytem thinks that there are more models (or aliens) than there really are! How do we fix it? We could use a set since it doesn't allow any duplicates. Now each model is only listed once and we won't accidentally select one twice and the system knows how many there actually are.
-
-need fast lookup of spaceship models (or aliens in next problem)
+```python
+rocket_ship_models_set = set(rocket_ship_models)
+```
+Now the models look like this:
+```python
+rocket_ship_models_set = {"T-13 Lander", "L-74 Titan", "L-75 Titan", "R-26 Surveyor", "D-47 Echo", "W-19 Pegasus", "X-98 Jet"}
+```
+Now each model is only listed once and we won't accidentally select any of the models twice and the system knows how many models there actually are. The boss wants us to add 
 
 ## Problem to Solve
 
