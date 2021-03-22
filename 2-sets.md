@@ -111,10 +111,15 @@ else:
 
 ## Problem to Solve
 
-On your next mission into space, you are sent to the Intergalactic Alien Trading Hub to gather some specimens to bring back to Earth. You end up collecting five aliens for the journey and now you have to catalog each of them to make sure that you haven't accidentally purchased the same breed twice. You will do this with a set since you don't want any of the aliens to be the same breed and the order doesn't matter yet since you're still not sure how to classify them. Here is a list aliens and the starting code that you will use.
+On your next mission into space, you are sent to the Intergalactic Alien Trading Hub to gather some specimens to bring back to Earth. You end up collecting six aliens for the journey and now you have to catalog each of them to make sure that you haven't accidentally purchased the same breed twice. You will do this with a set since you don't want any of the aliens to be the same breed and the order doesn't matter yet since you're still not sure how to classify them. The trader at the Hub also asked you if you had any "agarthan" aliens in your group. Here is a list aliens and the starting code that you will use.
 
 ```python
+aliens = ["hopkinsville goblin", "grey", "silurian", "mothman", "grey", "venusian"]
 
+# TODO: Create an empty set called alien_catalog.
+# TODO: Add each alien to the alien_catalog one at a time.
+# TODO: Check to see if there are any agarthans in your set.
+# TODO: Remove the hopkinsville goblin since it escaped while you were talking to the trader.
 ```
 
 [Back to Welcome Page](https://github.com/katereclark/data_structures_tutorial/blob/main/0-welcome.md)
