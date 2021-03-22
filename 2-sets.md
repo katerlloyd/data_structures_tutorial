@@ -12,7 +12,7 @@ desserts = {"brownies", "cookies", "tarts"}
 
 all_foods = union(groceries, desserts) # or you can write all_foods = groceries | desserts
 
-# all_foods will contain {"pizza", "brownies", "bacon", "cheese", "cookies", "tarts"}
+# all_foods will contain {"pizza", "tarts", "bacon", "cheese", "cookies", "brownies"}
 ```
 We can use the `intersection` function to find out what items are in both of the sets.
 
@@ -20,6 +20,14 @@ We can use the `intersection` function to find out what items are in both of the
 matching_foods = intersection(groceries, desserts) # or you can write matching_foods = groceries & desserts
 
 # matching_foods will contain {"brownies"}
+```
+
+If you wanted to determine which items were different between each set, then you could use the `difference` function.
+
+```python
+different_foods = groceries.difference(desserts)
+
+# different_foods will contain {"cheese", "pizza", "bacon}
 ```
 
 ## Important Concepts
@@ -44,7 +52,7 @@ But what if we also wanted to add the number 4 to the set? This would create wha
 
 There is a better way. This second option is called chaining. This method tells us to make a list of the values that occupies the same index. So if we added 4 to the set when 275061497 is already occupying index 4, then we would created a list at index 4 and add each number to the list. Adding the number 2202 to index 4 would look the same. This means that when we add the number 5 to index 5 there are no conflicts. Unfortunately both of these solutions negatively impact the performance, so we need to increase the size of the set if there are too many conflicts and then use the `index(n)` function again to reposition all of the items. 
 
-| 0 |   | 2  | 3  | [275061497, 4, 2202]  | 5 |  |
+| 0 |   | 2  | 3  | 275061497, 4, 2202  | 5 |  |
 | :------: | :------: | :------: | :------: | :------: |  :------: |  :------: |
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
 
