@@ -111,7 +111,7 @@ else:
 
 ## Problem to Solve
 
-On your next mission into space, you are sent to the Intergalactic Alien Trading Hub to gather some specimens to bring back to Earth. You end up collecting six aliens for the journey and now you have to catalog each of them to make sure that you haven't accidentally purchased the same breed twice. You will do this with a set since you don't want any of the aliens to be the same breed and the order doesn't matter yet since you're still not sure how to classify them. The trader at the Hub also asked you if you had any "agarthan" aliens in your group, so you'll need to figure that out as well before you leave. Here is a list aliens and the starting code that you will use.
+On your next mission into space, you are sent to the **Intergalactic Alien Trading Hub** to gather some specimens to bring back to Earth. You end up collecting six aliens for the journey and now you have to catalog each of them to make sure that you haven't accidentally purchased the same breed twice. You will do this with a set since you don't want any of the aliens to be the same breed and the order doesn't matter yet since you're still not sure how to classify them. The trader at the Hub also asked you if you had any "agarthan" aliens in your group, so you'll need to figure that out as well before you leave. Here is a list aliens and the starting code that you will use.
 
 Look here at the [starting code](https://github.com/katereclark/data_structures_tutorial/blob/main/alien_catalog.py) to begin your catalog, or you can copy and paste the code below. Once you are ready, you can check the answer here in the [solution code](https://github.com/katereclark/data_structures_tutorial/blob/main/alien_catalog_solution.py).
 
