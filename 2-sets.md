@@ -8,17 +8,27 @@ A set is a data structure where the order of the items inside is not important a
 
 The O(1) efficiency of operations in a set is due to hashing. Hashing maps an item in the set to a specific index location through a function that converts the item's value into an index number, especially if hte item is not an integer. This is a key part of the set data structure and allows for quick recall and lookup using the `index(n) = n` formula. As an example, if we add the numbers 0, 2, and 3 to a set, the numbers would be located at index(0) = 0, index(2) = 2, and index(3) = 3. This is called a sparse list because the items do not necessarily get added from exactly left to right like a stack. Only one value can be placed at that index, so no duplicates can be added.
 
-| 0 |   | 2  | 3  |   |
-| :------: | :------: | :------: | :------: | :------: |
-| 0 | 1 | 2 | 3 | 4 |
+| 0 |   | 2  | 3  |   |  |  |
+| :------: | :------: | :------: | :------: | :------: | :------: |  :------: |
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 |
 
-This method does not work very well once we get to larger numbers since it would demand that there be a lot of empty space if you only put in a few numbers which would be a huge waste of memory that could be used for something else. This is why we use another formula for these kinds of situations: `index(n) = n % spare list size`. This would mean that if we wanted to add the number 275,061,404 we would say that index(275,061,404) = 275,061,404 % 5 since `len(set) = 5`, which would give us an index of 4. We can use a hashing to add things that are not intergers using the formula `index(n) = hash(n) % sparse list size` with the `hash(n)` function in python. For non-integers, the hashing function will produce a different value each time the fucntion is run. 
+This method does not work very well once we get to larger numbers since it would demand that there be a lot of empty space if you only put in a few numbers which would be a huge waste of memory that could be used for something else. This is why we use another formula for these kinds of situations: `index(n) = n % spare list size`. This would mean that if we wanted to add the number 275,061,497 we would say that index(275,061,497) = 275,061,497 % 7 since `len(set) = 7`, which would give us an index of 4. We can use a hashing to add things that are not intergers using the formula `index(n) = hash(n) % sparse list size` with the `hash(n)` function in python. For non-integers, the hashing function will produce a different value each time the fucntion is run. 
 
-| 0 |   | 2  | 3  | 275061404  |
-| :------: | :------: | :------: | :------: | :------: |
-| 0 | 1 | 2 | 3 | 4 |
+| 0 |   | 2  | 3  | 275061497  |  |  |
+| :------: | :------: | :------: | :------: | :------: |  :------: |
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 |
 
-But what if we also wanted to add the number 4 to the set? This would create what is called a conflict.
+But what if we also wanted to add the number 4 to the set? This would create what is called a conflict. One way to resolve a conflict with sets it by using open addressing. This tells us to move the offending item (the one that also wants to go into the same index) to the next open spot. So 4 would be placed at index 5. If we wanted to add the number 5 or the number 2202 (2202 % 7 = 4) to the set, now we would have to move it to index 6 instead since both index 4 and index 5 are taken. Each time we do this we create another conflict and this can easily get out of hand rather quickly.  
+
+| 0 |   | 2  | 3  | 275061497  | 4 | 5 |
+| :------: | :------: | :------: | :------: | :------: |  :------: |
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+
+There is a better way. This second option is called chaining. This method tells us to 
+
+| 0 |   | 2  | 3  | [275061497, 4, 2202]  | 5 |  |
+| :------: | :------: | :------: | :------: | :------: |  :------: |
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 |
 
 One common error that can be made when working with sets is trying to hash a list, which cannot be done. 
 
