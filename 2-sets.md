@@ -73,6 +73,8 @@ These performance levels depends on the hashing and may become O(n) in a worst c
 
 ... To do this, we need to create an empty set. In Python, a set is made by writing `set_name = set()`.
 
+rocket_ship_models = ["W-19 Pegasus", "X-98 Megaship", "L-75 Titan", "R-26 Surveyer", "W-19 Pegaus", "T-13 Lander", "D-47 Schmidt", "L-74 Titan", "L-75 Titan"]
+
 oh no! the list they gave us has duplicate rocket ship models and now the sytem thinks that there are more models (or aliens) than there really are! How do we fix it? We could use a set since it doesn't allow any duplicates. Now each model is only listed once and we won't accidentally select one twice and the system knows how many there actually are.
 
 need fast lookup of spaceship models (or aliens in next problem)
