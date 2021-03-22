@@ -15,19 +15,19 @@ The O(1) efficiency of operations in a set is due to hashing. Hashing maps an it
 This method does not work very well once we get to larger numbers since it would demand that there be a lot of empty space if you only put in a few numbers which would be a huge waste of memory that could be used for something else. This is why we use another formula for these kinds of situations: `index(n) = n % spare list size`. This would mean that if we wanted to add the number 275,061,497 we would say that index(275,061,497) = 275,061,497 % 7 since `len(set) = 7`, which would give us an index of 4. We can use a hashing to add things that are not intergers using the formula `index(n) = hash(n) % sparse list size` with the `hash(n)` function in python. For non-integers, the hashing function will produce a different value each time the fucntion is run. 
 
 | 0 |   | 2  | 3  | 275061497  |  |  |
-| :------: | :------: | :------: | :------: | :------: |  :------: |
+| :------: | :------: | :------: | :------: | :------: |  :------: |  :------: |
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
 
 But what if we also wanted to add the number 4 to the set? This would create what is called a conflict. One way to resolve a conflict with sets it by using open addressing. This tells us to move the offending item (the one that also wants to go into the same index) to the next open spot. So 4 would be placed at index 5. If we wanted to add the number 5 or the number 2202 (2202 % 7 = 4) to the set, now we would have to move it to index 6 instead since both index 4 and index 5 are taken. Each time we do this we create another conflict and this can easily get out of hand rather quickly.  
 
 | 0 |   | 2  | 3  | 275061497  | 4 | 5 |
-| :------: | :------: | :------: | :------: | :------: |  :------: |
+| :------: | :------: | :------: | :------: | :------: |  :------: |  :------: |
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
 
 There is a better way. This second option is called chaining. This method tells us to 
 
 | 0 |   | 2  | 3  | [275061497, 4, 2202]  | 5 |  |
-| :------: | :------: | :------: | :------: | :------: |  :------: |
+| :------: | :------: | :------: | :------: | :------: |  :------: |  :------: |
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
 
 One common error that can be made when working with sets is trying to hash a list, which cannot be done. 
