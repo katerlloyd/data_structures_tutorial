@@ -95,7 +95,7 @@ rocket_ship_models_set.add("V-51 Fox")
 rocket_ship_models_set.remove("L-74 Titan")
 ```
 
-Notice how the order of the modles is not taken into account with a set. Here is the new assortment of models:
+Notice how the order of the models is not taken into account with a set. Here is the new assortment of models:
 
 ```python
 rocket_ship_models_set = {"T-13 Lander", "L-75 Titan", "R-26 Surveyor", "V-51 Fox", "D-47 Echo", "W-19 Pegasus", "X-98 Jet"}
@@ -111,8 +111,10 @@ else:
 
 ## Problem to Solve
 
-On your next mission into space, you are sent to the Intergalactic Alien Trading Hub to gather some specimens to bring back to Earth.
+On your next mission into space, you are sent to the Intergalactic Alien Trading Hub to gather some specimens to bring back to Earth. You end up collecting five aliens for the journey and now you have to catalog each of them to make sure that you haven't accidentally purchased the same breed twice. You will do this with a set since you don't want any of the aliens to be the same breed and the order doesn't matter yet since you're still not sure how to classify them. Here is a list aliens and the starting code that you will use.
 
-showcasing the aliens you brought back - don't want any diplicates of each type - order doesn't matter since we don't know how to classify them yet
+```python
+
+```
 
 [Back to Welcome Page](https://github.com/katereclark/data_structures_tutorial/blob/main/0-welcome.md)
