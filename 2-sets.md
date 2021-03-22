@@ -74,20 +74,44 @@ These performance levels depends on the hashing and may become O(n) in a worst c
 
 ```python
 rocket_ship_models = ["W-19 Pegasus", "X-98 Jet", "L-75 Titan", "R-26 Surveyor", "W-19 Pegasus", "T-13 Lander", "D-47 Echo", "L-74 Titan", "L-75 Titan"]
+number_of_models = len(rocket_ship_models) # number_of_models = 9
 ```
 
 Oh no! The list they gave us has duplicate rocket ship models in it and now the sytem thinks that there are more models than there really are! How do we fix it? We could use a set since it can only contains unique values. This will also give us a much quicker of looking up the models too! To create an empty set we would use `set()`, but this time we want to turn the list into a set to get rid of any duplicate values.
 
 ```python
 rocket_ship_models_set = set(rocket_ship_models)
+number_of_models = len(rocket_ship_models_set) # number_of_models = 7
 ```
 Now the models look like this:
+
 ```python
 rocket_ship_models_set = {"T-13 Lander", "L-74 Titan", "L-75 Titan", "R-26 Surveyor", "D-47 Echo", "W-19 Pegasus", "X-98 Jet"}
 ```
-Now each model is only listed once and we won't accidentally select any of the models twice and the system knows how many models there actually are. The boss wants us to add 
+Now each model is only listed once and we won't accidentally select any of the models twice and the system knows how many models there actually are. The boss wants us to add the new V-51 Fox to the models we already have. To do this we would use `set.add(value)`. He also would like us to remove the now outdated L-74 Titan, which can be accomplished using `remove.set(value)`.
+
+```python
+rocket_ship_models_set.add("V-51 Fox")
+rocket_ship_models_set.remove("L-74 Titan")
+```
+
+Notice how the order of the modles is not taken into account with a set. Here is the new assortment of models:
+
+```python
+rocket_ship_models_set = {"T-13 Lander", "L-75 Titan", "R-26 Surveyor", "V-51 Fox", "D-47 Echo", "W-19 Pegasus", "X-98 Jet"}
+```
+With the newest model added, we should probably make sure that it is actually in the set, so we will use the `if value in set:` operation to check.
+
+```python
+if "V-51 Fox" in rocket_ship_models_set:
+  print("V-51 Fox has been processed correctly." 
+else:
+  print("V-51 Fox has not been located." 
+```
 
 ## Problem to Solve
+
+On your next mission into space, you are sent to the Intergalactic Alien Trading Hub to gather some specimens to bring back to Earth.
 
 showcasing the aliens you brought back - don't want any diplicates of each type - order doesn't matter since we don't know how to classify them yet
 
