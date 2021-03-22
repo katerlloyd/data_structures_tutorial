@@ -73,7 +73,12 @@ These performance levels depends on the hashing and may become O(n) in a worst c
 
 ... To do this, we need to create an empty set. In Python, a set is made by writing `set_name = set()`.
 
+oh no! the list they gave us has duplicate rocket ship models and now the sytem thinks that there are more models (or aliens) than there really are! How do we fix it? We could use a set since it doesn't allow any duplicates. Now each model is only listed once and we won't accidentally select one twice and the system knows how many there actually are.
+
+need fast lookup of spaceship models (or aliens in next problem)
+
 ## Problem to Solve
 
+showcasing the aliens you brought back - don't want any diplicates of each type - order doesn't matter since we don't know how to classify them yet
 
 [Back to Welcome Page](https://github.com/katereclark/data_structures_tutorial/blob/main/0-welcome.md)
