@@ -52,10 +52,10 @@ Recursion is used in these operations to search through each of the subtrees.
 
 ## Example Problem
 
-sort or search through aliens that brought back by their names, size, etc
+sort or search through aliens that brought back by their names, size, etc GOOD FOR SEARCHING
 
 ## Problem to Solve
 
-space ship capacity to carry them all back to see if have enough space and what ship model would have the capacity to carry them all back
+space ship capacity to carry them all back to see if have enough space and what ship model would have the capacity to carry them all back GOOD FOR SEARCHING
 
 [Back to Welcome Page](https://github.com/katereclark/data_structures_tutorial/blob/main/0-welcome.md)
