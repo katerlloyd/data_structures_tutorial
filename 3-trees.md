@@ -14,12 +14,12 @@ Before we can go into how to use a binary search tree, we need to make sure that
 count_down = 10
 
 def system_check(count_down):
-  if count_down <= 0:
+  if count_down <= 0: # Base case (stops when the count down reaches 0)
     print("System Check Completed.")
     return
   else:
-    print("Sytem Check In Progress ...")
-    system_check(count_down-1)
+    print("Sytem Check In Progress...")
+    system_check(count_down - 1) # Smaller problem (subtracts 1 from the count down with each call)
 ```
 
 Another key concept that is related to recursion is called memoization. **Memoization** is where we reduce the number of recursive calls that are needed to solve the problem by *remembering* the results from the previous recursive call. Here is the another example of recursion, but this time using memoization as well:
