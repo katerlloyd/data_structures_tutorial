@@ -16,13 +16,18 @@ How would the data structure be used in Python (in some cases you will need to d
 
 ## Efficiency
 
-| Set Operation | Code | Performance | Description |
-| :---: | :---: | :---: | :---: |
-| New Set | set = set() | O(1) | Create empty set |
-| Add | set.add(value) | O(1) | Add value to set |
-| Remove | set.remove(value) | O(1) | Remove value from set |
-| Size | length = len(set) | O(1) | Size of set |
-| Member | if value in set: | O(1) | Check if value is in set | 
+Recursion is used in these operations to search through each of the subtrees.
+
+| BST Operation | Performance | Description |
+| :---: | :---: | :---: |
+| insert(value) | O(log n) | Finds empty spot to insert into using recursion |
+| remove(value) | O(log n) | Finds the value to remove using recursion |
+| contains(value) | O(log n) | Finds the value using recursion |
+| traverse_forward | O(log n) | Traverses left and then right subtrees using recursion (smallest to largest) |
+| traverse_reverse | O(log n) | Traverses right and then left subtrees using recursion (largest to smallest) |
+| height(node) | O(log n) | Finds the height of left and right subtrees using recursion and returns maximum height (adding one for the root node) |
+| size() | O(1) | Size of tree from BST class |
+| empty() | O(1) | Checks if root node is empty or size is zero |
 
 ## Example Problem
 
