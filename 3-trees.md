@@ -19,7 +19,7 @@ How would the data structure be used in Python (in some cases you will need to d
 Recursion is used in these operations to search through each of the subtrees.
 
 | BST Operation | Performance | Description |
-| :---: | :---: | :---: |
+| :---: | :---: | :--- |
 | insert(value) | O(log n) | Finds empty spot to insert into using recursion |
 | remove(value) | O(log n) | Finds the value to remove using recursion |
 | contains(value) | O(log n) | Finds the value using recursion |
