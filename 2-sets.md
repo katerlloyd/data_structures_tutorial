@@ -27,7 +27,7 @@ If you wanted to determine which items were different between each set, then you
 ```python
 different_foods = groceries.difference(desserts)
 
-# different_foods will contain {"cheese", "pizza", "bacon}
+# different_foods will contain {"cheese", "pizza", "bacon"}
 ```
 
 ## Important Concepts
