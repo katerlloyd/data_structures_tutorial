@@ -8,10 +8,18 @@ What kind of problems can be solved using the data structure?
 
 ## Recursion
 
-Before we can go into how to use a binary search tree, we need to make sure that the concept of recursion is understood. **Recursion** is where a function calls itself. This can be dangerous, however, because this will result in a function calling itself forever unless we specify a situation where recursion would not be required. This stopping place is called a base case. A recursive function also needs to be called on a smaller version of the problem. In other words, we need to make sure that the problem we are trying to solve gets smaller with each recursive call so that it will eventually get to the base case and stop instead of going on forever. Here is an example with the base case and smaller problem labeled:
+Before we can go into how to use a binary search tree, we need to make sure that the concept of recursion is understood. **Recursion** is where a function calls itself. This can be dangerous, however, because this will result in a function calling itself forever unless we specify a situation where recursion would not be required. This stopping place is called a **base case**. A recursive function also needs to be called on a smaller version of the problem. In other words, we need to make sure that the problem we are trying to solve gets smaller with each recursive call so that it will eventually get to the base case and stop instead of going on forever. Here is an example with the base case and smaller problem labeled:
 
 ```python
-# CODE
+count_down = 10
+
+def system_check(count_down):
+  if count_down <= 0:
+    print("System Check Completed.")
+    return
+  else:
+    print("Sytem Check In Progress ...")
+    system_check(count_down-1)
 ```
 
 Another key concept that is related to recursion is called memoization. **Memoization** is where we reduce the number of recursive calls that are needed to solve the problem by *remembering* the results from the previous recursive call. Here is the another example of recursion, but this time using memoization as well:
