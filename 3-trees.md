@@ -62,7 +62,7 @@ class BST:
         if self.root is None:
             self.root = BST.Node(data)
         else:
-            self._insert(data, self.root)  # Start at the root
+            self._insert(data, self.root)
 
     def _insert(self, data, node):
         if data < node.data:
@@ -85,15 +85,25 @@ class BST:
             yield from self._traverse_forward(node.left)
             yield node.data
             yield from self._traverse_forward(node.right)
+```
 
-tree = BST()
-tree.insert(5)
-tree.insert(3)
-tree.insert(7)
-tree.insert(10)
-tree.insert(1)
-for x in tree:
-    print(x)  # 1, 3, 5, 7, 10
+We have added a few more alien species to our set since we stopped at another trading post on the way back to Earth. We are going to add all of the species from the set into the binary search tree to display them in alphabetical order. Our boss also asks us if we have any "ashtar" in our group of aliens. 
+
+```python
+alien_catalog = {"venusian", "irken", "ashtar", "silurian", "mothman", "sleestak", "grey", "saiyan", "nam", "plejaren", "martian"}
+
+alien_tree = BST()
+
+for species in alien_catalog:
+  alien_tree.insert(species)
+
+for species in alien_tree:
+    print(species)
+    
+if "ashtar" in alien_tree:
+  print("Ashtar is in the group.")
+else:
+  print("Ashtar was not found.")
 ```
 
 ## Problem to Solve
