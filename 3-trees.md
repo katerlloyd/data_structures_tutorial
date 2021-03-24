@@ -24,8 +24,7 @@ If we were to add more numbers the BST, we would need to follow these same rules
 
 ![subtrees](subtrees.png)
 
-What is the purpose of the data structure?
-What kind of problems can be solved using the data structure?
+A binary search tree is very efficient when it comes to searching for a place to add a value or looking up a value. This is because it cuts the number of elements it has to go through before locating the value in half on average. This sure beats iterating through each item in a list. However, a BST can only be this effiicient if it is balanced. A BST is balanced when 
 
 ## Recursion
 
