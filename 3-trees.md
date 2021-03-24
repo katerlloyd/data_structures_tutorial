@@ -159,7 +159,7 @@ class BST:
         if self.root is None:
             return 0
         else:
-            return self._get_height(self.root)  # Start at the root
+            return self._get_height(self.root)
 
     def _get_height(self, node):
     
