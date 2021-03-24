@@ -14,12 +14,14 @@ Before we can go into how to use a binary search tree, we need to make sure that
 count_down = 10
 
 def system_check(count_down):
-  if count_down <= 0: # Base case: stops when the count down reaches 0.
+  # Base case: stops when the count down reaches 0.
+  if count_down <= 0:
     print("System Check Completed.")
     return
+  # Smaller problem: subtracts 1 from the count down with each call.
   else:
     print("Sytem Check In Progress...")
-    system_check(count_down - 1) # Smaller problem: subtracts 1 from the count down with each call.
+    system_check(count_down - 1)
 ```
 
 ## Important Concepts
