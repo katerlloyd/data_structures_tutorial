@@ -89,7 +89,7 @@ Recursion is used in these operations to search through each of the subtrees.
 
 We have added a few more alien species to our set since we stopped at another trading post on the way back to Earth. We are going to add all of the species from the set into the binary search tree to display them in alphabetical order. Our boss also asks us if we have any "ashtar" in our group of aliens so he can take some extra precautions before we get back to Earth.
 
-In order to do this we will need to add an interator to our Node class. To accomplish this, we can write two functions: the `__iter__()` function and the `_traverse_forward()` function. The first one overrules the built in Python `__iter__()` function and the second tells it the specifics of what to do. Yield in Python not only returns a value but is also able to remember where it left off with every iteration so it is very valuable when recursing through trees.
+In order to do this we will need to add an interator to our BST class. To accomplish this, we can write two functions: the `__iter__()` function and the `_traverse_forward()` function. The first one overrules the built in Python `__iter__()` function and the second tells it the specifics of what to do. Yield in Python not only returns a value but is also able to remember where it left off with every iteration so it is very valuable when recursing through trees.
 
 ```python 
 # Iterates forward starting at the root, like in a for loop.
