@@ -8,7 +8,7 @@ What kind of problems can be solved using the data structure?
 
 ## Recursion
 
-Before we can go into how to use a binary search tree, we need to make sure that the concept of recursion is understood. **Recursion** is where a function calls itself. This can be dangerous, however, because this will result in a function calling itself forever unless we specify a situation where recursion would not be required. This stopping place is called a **base case**. A recursive function also needs to be called on a smaller version of the problem. In other words, we need to make sure that the problem we are trying to solve gets smaller with each recursive call so that it will eventually get to the base case and stop instead of going on forever. Here is an example with the base case and smaller problem labeled:
+Before we can go into how to use a binary search tree, we need to make sure that the concept of recursion is understood. **Recursion** is where a function calls itself. This can be dangerous, however, because this will result in a function calling itself forever unless we specify a situation where recursion would not be required. This stopping place is called a **base case**. A recursive function also needs to be called on a smaller version of the problem. In other words, we need to make sure that the problem we are trying to solve gets smaller with each recursive call so that it will eventually get to the base case and stop instead of going on forever. Here is an example with the recursion requirements labeled:
 
 ```python
 count_down = 10
@@ -48,7 +48,7 @@ Recursion is used in these operations to search through each of the subtrees.
 ```python
 class BST:
     class Node:
-        def __init__(self, data):       
+        def __init__(self, data):
             self.data = data
             self.left = None
             self.right = None
@@ -106,6 +106,88 @@ else:
 
 ## Problem to Solve
 
-space ship capacity to carry them all back to see if have enough space and what ship model would have the capacity to carry them all back GOOD FOR SEARCHING
+Our boss has now requested that we return the "ashtar" and remove it from the system (tree) since the precautions were apparently not worth the risk. He would also like for us to add the capability to reverse alphabetical order that the species are displayed in the system in case it is needed later.
+
+Look here at the [starting code](https://github.com/katereclark/data_structures_tutorial/blob/main/alien_tree.py) to begin your catalog, or you can copy and paste the code below. Once you are ready, you can check the answer here in the [solution code](https://github.com/katereclark/data_structures_tutorial/blob/main/alien_tree_solution.py).
+
+```python
+class BST:
+    class Node:
+        def __init__(self, data):       
+            self.data = data
+            self.left = None
+            self.right = None
+
+    def __init__(self):
+        self.root = None
+
+    def insert(self, data):
+        if self.root is None:
+            self.root = BST.Node(data)
+        else:
+            self._insert(data, self.root)
+
+    def _insert(self, data, node):
+        if data < node.data:
+            if node.left is None:
+                node.left = BST.Node(data)
+            else:
+                self._insert(data, node.left)
+        else:
+            if node.right is None:
+                node.right = BST.Node(data)
+            else:
+                self._insert(data, node.right)
+
+         
+    def __iter__(self):
+        yield from self._traverse_forward(self.root)
+        
+    def _traverse_forward(self, node):
+        if node is not None:
+            yield from self._traverse_forward(node.left)
+            yield node.data
+            yield from self._traverse_forward(node.right)
+            
+    def __reversed__(self):
+      yield from self._traverse_backward(self.root)
+      
+    def _traverse_backward(self, node):
+      # TODO: 
+      if node is not None:
+            yield from self._traverse_backward(node.right)
+            yield node.data
+            yield from self._traverse_backward(node.left)
+            
+    def get_height(self):
+        if self.root is None:
+            return 0
+        else:
+            return self._get_height(self.root)  # Start at the root
+
+    def _get_height(self, node):
+      # TODO: 
+      if node == None:
+          return 0
+      else:
+          left_height = self._get_height(node.left)
+          right_height = self._get_height(node.right)
+          if left_height > right_height:
+              return left_height + 1
+          else:
+              return right_height + 1
+  
+  alien_catalog = {"venusian", "irken", "ashtar", "silurian", "mothman", "sleestak", "grey", "saiyan", "nam", "plejaren", "martian"}
+
+  alien_tree = BST()
+
+  for species in reversed(alien_tree):
+    print(species)
+
+  for species in alien_tree:
+    print(species)
+
+  print("Height: " + str(alien_tree.get_height()))
+```
 
 [Back to Welcome Page](https://github.com/katereclark/data_structures_tutorial/blob/main/0-welcome.md)
