@@ -105,7 +105,7 @@ else:
 
 ## Problem to Solve
 
-Our boss has now requested that we return the "ashtar" and remove it from the system (tree) since the precautions were apparently not worth the risk. He would also like for us to add the capability to reverse alphabetical order that the species are displayed in the system in case it is needed later.
+Our boss has now requested that we add the capability to reverse alphabetical order that the species are displayed in the system in case it is needed later. He would also like for us to add the ability to check the height of the tree to make sure that it is balanced.
 
 Look here at the [starting code](https://github.com/katereclark/data_structures_tutorial/blob/main/alien_tree.py) to begin your catalog, or you can copy and paste the code below. Once you are ready, you can check the answer here in the [solution code](https://github.com/katereclark/data_structures_tutorial/blob/main/alien_tree_solution.py).
 
@@ -137,21 +137,6 @@ class BST:
                 node.right = BST.Node(data)
             else:
                 self._insert(data, node.right)
-    
-    def remove(self, data):
-        if self.root is None:
-            return
-        else:
-            self._remove(data, self.root)
-
-    def _remove(self, data, node):
-        # TODO: 
-        if data < node.data:
-            node.left = self._remove(data, node.left)
-        elif(data > node.data):
-            node.right = self._remove(node.right, data)
-        else:
-            self.root = None
                 
     def __iter__(self):
         yield from self._traverse_forward(self.root)
