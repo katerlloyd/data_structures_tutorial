@@ -48,39 +48,56 @@ Recursion is used in these operations to search through each of the subtrees.
 ```python
 class BST:
     class Node:
-        def __init__(self, data):
+
+        # Initializes the node with the data and empty child nodes.
+        def __init__(self, data):       
             self.data = data
             self.left = None
             self.right = None
 
+    # Initializes the BST to be empty.
     def __init__(self):
         self.root = None
 
+    # Inserts the data into the next open node unless the root is empty.
     def insert(self, data):
+        # inserts the data into the root if it is empty.
         if self.root is None:
             self.root = BST.Node(data)
         else:
             self._insert(data, self.root)
 
+    # Locates the next empty node and inserts the data into it.
     def _insert(self, data, node):
+        # Data is smaller so goes on the left.
         if data < node.data:
             if node.left is None:
+                # Inserts data into empty spot.
                 node.left = BST.Node(data)
             else:
+                # Keeps searching for empty spot recursively.
                 self._insert(data, node.left)
+        # Data is larger so it goes on the right.
         else:
             if node.right is None:
+                # Inserts data into empty spot.
                 node.right = BST.Node(data)
             else:
+                # Keeps searching for empty spot recursively.
                 self._insert(data, node.right)
-         
+    
+    # Iterates forward starting at the root, like in a for loop.
     def __iter__(self):
         yield from self._traverse_forward(self.root)
-        
+    
+    # Keeps iterating forwared until runs into an empty node.
     def _traverse_forward(self, node):
         if node is not None:
+            # Returns the left node location.
             yield from self._traverse_forward(node.left)
+            # Returns the data value.
             yield node.data
+            # Remembers the right node location.
             yield from self._traverse_forward(node.right)
 ```
 
@@ -89,14 +106,17 @@ We have added a few more alien species to our set since we stopped at another tr
 ```python
 alien_catalog = {"venusian", "irken", "ashtar", "silurian", "mothman", "sleestak", "grey", "saiyan", "nam", "plejaren", "martian"}
 
+# Creates a BST.
 alien_tree = BST()
 
+# Inserts each species into the BST.
 for species in alien_catalog:
   alien_tree.insert(species)
 
+# Iterates over tree forwards.
 for species in alien_tree:
     print(species)
-    
+
 if "ashtar" in alien_tree:
   print("Ashtar is in the group.")
 else:
@@ -153,7 +173,6 @@ class BST:
     def _traverse_backward(self, node):
     
         # TODO: Reverse the _traverse_forward() function to iterate backwards.
-        pass # Remove to start writing the code.
             
     def get_height(self):
         if self.root is None:
@@ -182,7 +201,8 @@ alien_catalog = {"venusian", "irken", "ashtar", "silurian", "mothman", "sleestak
 alien_tree = BST()
 
 for species in alien_catalog:
-    alien_tree.insert(species)
+    
+    # TODO: Insert the species into the alien_tree.
 
 for species in reversed(alien_tree):
     print(species)
