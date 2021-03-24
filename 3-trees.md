@@ -2,17 +2,27 @@
 
 ## Introduction and Uses
 
-A **tree** is a data structure that uses nodes (like the branch points on a physical tree) that are linked together using pointers. A **binary tree** is a tree that can only have up to two child nodes per subtree. A **subtree** is the child nodes to the left and right of the parent node. The first node at the top of the tree is called the **root**. A node that doesn't link to any children is called a **leaf**. A **binary search tree (BST)** is a binary tree where there are specific instructions for where to insert data. With a BST, you have to add the data that is less than the parent node to the left and the data that is greater than the parent node to the right. You can also insert data that is equal to the parent node to the right if you are okay with there being duplicates in your tree.
+A **tree** is a data structure that uses nodes (like the branch points on a physical tree) that are linked together using pointers. A **binary tree** is a tree that can only have up to two child nodes per subtree. A **subtree** is the child nodes to the left and right of the parent node. The first node at the top of the tree is called the **root**. A node that doesn't link to any children is called a **leaf**. A **binary search tree (BST)** is a binary tree where there are specific instructions for where to insert data. With a BST, you have to add the data that is less than the parent node to the left and the data that is greater than the parent node to the right. You can also insert data that is equal to the parent node to the right if you are okay with there being duplicates in your tree. This makes sure that the tree is able to be sorted.
 
 As an example, we will create a root with the number 5 in it.
+
 ![root](root.png)
 
 The parent node is 5 and we know that 2 is less than 5, so we add as a child node to the left of the parent node. Since 11 is greater than 5, we add it to the right of the parent node.
+
 ![tree](tree.png)
 
+If we want to add the number 4 to the tree, we start at the root and work our way down. 4 is less than 5, so we move to the right. 4 is greater than 2 and 2 is a leaf (no child nodes) so we can stop searching for an open spot and add 4 to the right of 2 as a child node. 2 is the parent node of 4 now, so we now have another subtree.
 
+![tree2](tree2.png)
 
+In order to add the number 3, we start at the root and see that 3 is less than 5, so we move to the right. We then see that 3 is greater than 2, so we move to the right again. 3 is less than 4 and 4 doesn't have any children so we know that we can insert 3 as a child node to the left of 4. To add 1, we would go from 5 to 2 and then add it to the left of 2. If we wanted to add an 8, we move from 5 to 11 and then see that 11 is a leaf. Since 8 is less than 11 we would add 8 to the left as a child node.
 
+![tree3](tree3.png)
+
+If we were to add more numbers the BST, we would need to follow these same rules with each number, always starting at the root and moving down. The red boxes are examples of some of the subtrees in this particular BST.
+
+![tree4](tree4.png)
 
 What is the purpose of the data structure?
 What kind of problems can be solved using the data structure?
