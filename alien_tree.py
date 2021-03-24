@@ -41,7 +41,6 @@ class BST:
     def _traverse_backward(self, node):
     
         # TODO: Reverse the _traverse_forward() function to iterate backwards.
-        pass # Remove to start writing the code.
             
     def get_height(self):
         if self.root is None:
@@ -70,7 +69,8 @@ alien_catalog = {"venusian", "irken", "ashtar", "silurian", "mothman", "sleestak
 alien_tree = BST()
 
 for species in alien_catalog:
-    alien_tree.insert(species)
+    
+    # TODO: Insert the species into the alien_tree.
 
 for species in reversed(alien_tree):
     print(species)
