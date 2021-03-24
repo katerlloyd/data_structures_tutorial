@@ -2,8 +2,11 @@
 
 ## Introduction and Uses
 
-What is the purpose of the data structure?
+A **tree** is a data structure that uses nodes (like the branch points on a physical tree) that are linked together using pointers. A **binary tree** is a tree that can only have up to two child nodes per subtree. A **subtree** is the child nodes to the left and right of the parent node. The first node at the top of the tree is called the **root**. A node that doesn't link to any children is called a **leaf**. 
 
+As an example, we will create a root 
+
+What is the purpose of the data structure?
 What kind of problems can be solved using the data structure?
 
 ## Recursion
