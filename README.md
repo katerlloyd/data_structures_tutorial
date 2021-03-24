@@ -23,6 +23,6 @@ Before you take a look at each of these data structures, however, it is importan
 ## Contact Information
 For questions or comments, please send them to:
 
-**Kate Clark** | BYU-Idaho, CSE 212-2
+**Kate Clark** | BYU-Idaho, CSE 212-02
 
 [cla16022@byui.edu](cla16022@byui.edu)
