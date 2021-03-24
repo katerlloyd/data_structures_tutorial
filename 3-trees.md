@@ -107,7 +107,7 @@ else:
 
 Our boss has now requested that we add the capability to reverse alphabetical order that the species are displayed in the system in case it is needed later. He would also like for us to add the ability to check the height of the tree to make sure that it is balanced.
 
-Look here at the [starting code](https://github.com/katereclark/data_structures_tutorial/blob/main/alien_tree.py) to begin your catalog, or you can copy and paste the code below. Once you are ready, you can check the answer here in the [solution code](https://github.com/katereclark/data_structures_tutorial/blob/main/alien_tree_solution.py).
+Look here at the [starting code](https://github.com/katereclark/data_structures_tutorial/blob/main/alien_tree.py) to begin your task, or you can copy and paste the code below. Once you are ready, you can check the answer here in the [solution code](https://github.com/katereclark/data_structures_tutorial/blob/main/alien_tree_solution.py).
 
 ```python
 class BST:
