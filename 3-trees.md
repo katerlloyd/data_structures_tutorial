@@ -73,7 +73,6 @@ class BST:
                 node.right = BST.Node(data)
             else:
                 self._insert(data, node.right)
-
          
     def __iter__(self):
         yield from self._traverse_forward(self.root)
@@ -138,8 +137,22 @@ class BST:
                 node.right = BST.Node(data)
             else:
                 self._insert(data, node.right)
+    
+    def remove(self, data):
+        if self.root is None:
+            return
+        else:
+            self._remove(data, self.root)
 
-         
+    def _remove(self, data, node):
+        # TODO: 
+        if data < node.data:
+            node.left = self._remove(data, node.left)
+        elif(data > node.data):
+            node.right = self._remove(node.right, data)
+        else:
+            self.root = None
+                
     def __iter__(self):
         yield from self._traverse_forward(self.root)
         
@@ -180,6 +193,7 @@ class BST:
 alien_catalog = {"venusian", "irken", "ashtar", "silurian", "mothman", "sleestak", "grey", "saiyan", "nam", "plejaren", "martian"}
 
 alien_tree = BST()
+
 for species in alien_catalog:
     alien_tree.insert(species)
 
