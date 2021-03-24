@@ -28,7 +28,9 @@ A binary search tree is very efficient when it comes to searching for a place to
 
 ![unbalanced](unbalanced.png)
 
-A **balanced binary search tree** is when the height of any two given subtrees is no more than two different 
+A **balanced binary search tree** is when the differences between the height of any two subtrees is not very large, which in the case of an **AVL tree** the height difference is less than 2. To calculate the height of a tree, count the maximum number of notes between the root and the leaves and add 1 for the root. This next tree would be considered unbalanced because the maximum height of any two trees would be 6 and 4 with a height difference of 2.
+
+![unbalanced tree](unbalanced_tree.png)
 
 ## Recursion
 
