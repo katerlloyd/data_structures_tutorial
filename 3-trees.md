@@ -45,8 +45,6 @@ Recursion is used in these operations to search through each of the subtrees.
 
 ## Example Problem
 
-sort or search through aliens that brought back by their names, size, etc GOOD FOR SEARCHING
-
 ```python
 class BST:
     class Node:
@@ -87,7 +85,7 @@ class BST:
             yield from self._traverse_forward(node.right)
 ```
 
-We have added a few more alien species to our set since we stopped at another trading post on the way back to Earth. We are going to add all of the species from the set into the binary search tree to display them in alphabetical order. Our boss also asks us if we have any "ashtar" in our group of aliens. 
+We have added a few more alien species to our set since we stopped at another trading post on the way back to Earth. We are going to add all of the species from the set into the binary search tree to display them in alphabetical order. Our boss also asks us if we have any "ashtar" in our group of aliens so he can take some extra precautions before we get back to Earth.
 
 ```python
 alien_catalog = {"venusian", "irken", "ashtar", "silurian", "mothman", "sleestak", "grey", "saiyan", "nam", "plejaren", "martian"}
