@@ -92,19 +92,19 @@ We have added a few more alien species to our set since we stopped at another tr
 In order to do this we will need to add an interator to our Node class. To accomplish this, we can write two functions: the `__iter__()` function and the `_traverse_forward()` function. The first one overrules the built in Python `__iter__()` function and the second tells it the specifics of what to do.
 
 ```python 
-    # Iterates forward starting at the root, like in a for loop.
-    def __iter__(self):
-        yield from self._traverse_forward(self.root)
-    
-    # Keeps iterating forwared until runs into an empty node.
-    def _traverse_forward(self, node):
-        if node is not None:
-            # Returns the left node location.
-            yield from self._traverse_forward(node.left)
-            # Returns the data value.
-            yield node.data
-            # Remembers the right node location.
-            yield from self._traverse_forward(node.right)
+# Iterates forward starting at the root, like in a for loop.
+def __iter__(self):
+    yield from self._traverse_forward(self.root)
+
+# Keeps iterating forwared until runs into an empty node.
+def _traverse_forward(self, node):
+    if node is not None:
+        # Returns the left node location.
+        yield from self._traverse_forward(node.left)
+        # Returns the data value.
+        yield node.data
+        # Remembers the right node location.
+        yield from self._traverse_forward(node.right)
 ```
 
 Now we can display the alien species in order and check to see if "ashtar" is in the group we are bringing back.
