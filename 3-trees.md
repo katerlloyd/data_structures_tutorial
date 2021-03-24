@@ -22,7 +22,7 @@ In order to add the number 3, we start at the root and see that 3 is less than 5
 
 If we were to add more numbers the BST, we would need to follow these same rules with each number, always starting at the root and moving down. The red boxes are examples of some of the subtrees in this particular BST.
 
-![tree4](tree4.png)
+![subtrees](subtrees.png)
 
 What is the purpose of the data structure?
 What kind of problems can be solved using the data structure?
