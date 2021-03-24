@@ -177,17 +177,16 @@ class BST:
           else:
               return right_height + 1
   
-  alien_catalog = {"venusian", "irken", "ashtar", "silurian", "mothman", "sleestak", "grey", "saiyan", "nam", "plejaren", "martian"}
+alien_catalog = {"venusian", "irken", "ashtar", "silurian", "mothman", "sleestak", "grey", "saiyan", "nam", "plejaren", "martian"}
 
-  alien_tree = BST()
+alien_tree = BST()
+for species in alien_catalog:
+    alien_tree.insert(species)
 
-  for species in reversed(alien_tree):
+for species in reversed(alien_tree):
     print(species)
-
-  for species in alien_tree:
-    print(species)
-
-  print("Height: " + str(alien_tree.get_height()))
+    
+print("Height: " + str(alien_tree.get_height())) # Will be 5.
 ```
 
 [Back to Welcome Page](https://github.com/katereclark/data_structures_tutorial/blob/main/0-welcome.md)
