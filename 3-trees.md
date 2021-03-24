@@ -123,6 +123,7 @@ for species in alien_catalog:
 for species in alien_tree:
     print(species)
 
+# Checks if the ashtar is in the BST.
 if "ashtar" in alien_tree:
   print("Ashtar is in the group.")
 else:
