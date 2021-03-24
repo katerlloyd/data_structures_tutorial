@@ -24,7 +24,9 @@ If we were to add more numbers the BST, we would need to follow these same rules
 
 ![subtrees](subtrees.png)
 
-A binary search tree is very efficient when it comes to searching for a place to add a value or looking up a value. This is because it cuts the number of elements it has to go through before locating the value in half on average. This sure beats iterating through each item in a list. However, a BST can only be this effiicient if it is balanced. A BST is balanced when 
+A binary search tree is very efficient when it comes to searching for a place to add a value or looking up a value. This is because it cuts the number of elements it has to go through before locating the value in half on average. This sure beats iterating through each item in a list. However, a BST can only be this efficient if it is balanced. If we were to add the values in a different order we could get something that looks just like a list and would have a performance of O(n) rather than O(log) since it would have to iterate over each item in the BST instead of only going through about half of the items. Such a BST would look like this:
+
+![unbalanced](unbalanced.png)
 
 ## Recursion
 
