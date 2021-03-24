@@ -22,13 +22,6 @@ def system_check(count_down):
     system_check(count_down - 1) # Smaller problem: subtracts 1 from the count down with each call.
 ```
 
-Another key concept that is related to recursion is called memoization. **Memoization** is where we reduce the number of recursive calls that are needed to solve the problem by *remembering* the results from the previous recursive call. Here is the another example of recursion, but this time using memoization as well:
-
-```python
-# CODE
-```
-DIAGRAM OF HOW IT MAKES THE CALLS DECREASE (like with fibonacci)
-
 ## Important Concepts
 
 How would the data structure be used in Python (in some cases you will need to discuss recursion)?
