@@ -2,9 +2,17 @@
 
 ## Introduction and Uses
 
-A **tree** is a data structure that uses nodes (like the branch points on a physical tree) that are linked together using pointers. A **binary tree** is a tree that can only have up to two child nodes per subtree. A **subtree** is the child nodes to the left and right of the parent node. The first node at the top of the tree is called the **root**. A node that doesn't link to any children is called a **leaf**. 
+A **tree** is a data structure that uses nodes (like the branch points on a physical tree) that are linked together using pointers. A **binary tree** is a tree that can only have up to two child nodes per subtree. A **subtree** is the child nodes to the left and right of the parent node. The first node at the top of the tree is called the **root**. A node that doesn't link to any children is called a **leaf**. A **binary search tree (BST)** is a binary tree where there are specific instructions for where to insert data. With a BST, you have to add the data that is less than the parent node to the left and the data that is greater than the parent node to the right. You can also insert data that is equal to the parent node to the right if you are okay with there being duplicates in your tree.
 
-As an example, we will create a root 
+As an example, we will create a root with the number 5 in it.
+![root](root.png)
+
+The parent node is 5 and we know that 2 is less than 5, so we add as a child node to the left of the parent node. Since 11 is greater than 5, we add it to the right of the parent node.
+![tree](tree.png)
+
+
+
+
 
 What is the purpose of the data structure?
 What kind of problems can be solved using the data structure?
