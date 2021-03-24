@@ -151,11 +151,9 @@ class BST:
       yield from self._traverse_backward(self.root)
       
     def _traverse_backward(self, node):
-      # TODO: 
-      if node is not None:
-            yield from self._traverse_backward(node.right)
-            yield node.data
-            yield from self._traverse_backward(node.left)
+    
+        # TODO: Reverse the _traverse_forward() function to iterate backwards.
+        pass # Remove to start writing the code.
             
     def get_height(self):
         if self.root is None:
@@ -164,16 +162,20 @@ class BST:
             return self._get_height(self.root)  # Start at the root
 
     def _get_height(self, node):
-      # TODO: 
-      if node == None:
-          return 0
-      else:
-          left_height = self._get_height(node.left)
-          right_height = self._get_height(node.right)
-          if left_height > right_height:
-              return left_height + 1
-          else:
-              return right_height + 1
+    
+      # TODO: Check the height of the tree using the left and right node heights.
+      
+        if node == None:
+            return 0
+        # Recursively call the _get_height() function on the left and right nodes.
+        else:
+            left_height = None # Change this.
+            right_height = None # Change this.
+          
+            if left_height > right_height:
+                return left_height + 1
+            else:
+                return right_height + 1
   
 alien_catalog = {"venusian", "irken", "ashtar", "silurian", "mothman", "sleestak", "grey", "saiyan", "nam", "plejaren", "martian"}
 
