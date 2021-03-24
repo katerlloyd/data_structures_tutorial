@@ -1,6 +1,6 @@
 # Stacks
 
-A stack is a data structure that uses the first in last out method. This means that the first item added to the array will be the last one to be taken out of the array. Adding an item to the array will always put it at the very end and is called `pushing`. Removing and returning something from the array also will happen at the very end and is called `popping`. This can be compared to a stack of pancakes. The first pancake that you `push` or add onto the stack will be the last to be `popped` or removed from the stack. A stack is an ordered and changeable list. 
+A **stack** is a data structure that uses the first in last out method. This means that the first item added to the array will be the last one to be taken out of the array. Adding an item to the array will always put it at the very end and is called **pushing**. Removing and returning something from the array also will happen at the very end and is called **popping**. This can be compared to a stack of pancakes. The first pancake that you `push` or add onto the stack will be the last to be `popped` or removed from the stack. A **stack** is an ordered and changeable list. 
 
 ![pancakes](pancakes.png)
 
