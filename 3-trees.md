@@ -4,7 +4,7 @@
 
 A **tree** is a data structure that uses nodes (like the branch points on a physical tree) that are linked together using pointers. A **binary tree** is a tree that can only have up to two child nodes per subtree. A **subtree** is the child nodes to the left and right of the parent node. The first node at the top of the tree is called the **root**. A node that doesn't link to any children is called a **leaf**. A **binary search tree (BST)** is a binary tree where there are specific instructions for where to insert data. With a BST, you have to add the data that is less than the parent node to the left and the data that is greater than the parent node to the right. You can also insert data that is equal to the parent node to the right if you are okay with there being duplicates in your tree. This makes sure that the tree is able to be sorted. Binary search trees can used for many different operations. Some situations where you would use a BST would be when you have to compare data values, sort data, look for or retrieve data quickly in a searching algorithm, or maintain a regularly changing data set. 
 
-As an example, we will create a root with the number 5 in it.
+As an example, we will create a root that contains the number 5.
 
 ![root](root.png)
 
