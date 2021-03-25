@@ -32,6 +32,10 @@ A **balanced binary search tree** is when the differences between the height of 
 
 ![unbalanced tree](unbalanced_tree.png)
 
+In order to balance this tree using the AVL method, we would need to rotate the offending leaf so that the leaf becomes the parent and the node order is changed. This allows us to have O(log n) performance now that the tree is balanced since the heights are 5 and 4 with a difference of 1 rather than 2. 
+
+1[balanced tree](balanced_tree.png)
+
 ## Recursion
 
 Before we can go into how to use a binary search tree, we need to make sure that the concept of recursion is understood. **Recursion** is where a function calls itself. This can be dangerous, however, because this will result in a function calling itself forever unless we specify a situation where recursion would not be required. This stopping place is called a **base case**. A recursive function also needs to be called on a smaller version of the problem. In other words, we need to make sure that the problem we are trying to solve gets smaller with each recursive call so that it will eventually get to the base case and stop instead of going on forever. Here is an example with the recursion requirements labeled:
