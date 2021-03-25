@@ -56,9 +56,7 @@ def system_check(count_down):
 
 ## Important Concepts
 
-How would the data structure be used in Python (in some cases you will need to discuss recursion)?
-
-What kind of errors are common when using the data structure?
+In order to use a BST, we need to create a BST class that contains a Node class. Each node has a left node points and right node pointer in addition to the data it stores. Every BST is initialized with a root that starts out empty. 
 
 ```python
 class BST:
@@ -73,7 +71,11 @@ class BST:
     # Initializes the BST to be empty.
     def __init__(self):
         self.root = None
+```
 
+Now that we have initialized the classes, we can start adding more capabilities to them. We will need two functions to insert data into the BST. Since this is a recursive process we will have a base case of ___.
+
+```python
     # Inserts the data into the next open node unless the root is empty.
     def insert(self, data):
         # inserts the data into the root if it is empty.
@@ -101,6 +103,8 @@ class BST:
                 # Keeps searching for empty spot recursively.
                 self._insert(data, node.right)
 ```
+
+What kind of errors are common when using the data structure?
 
 ## Efficiency
 
