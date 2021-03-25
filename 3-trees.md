@@ -108,7 +108,7 @@ The `_insert()` function inserts the data value to the left if it is less than t
                 self._insert(data, node.right)
 ```
 
-Some common errors that people can make with trees are forgetting to take duplicate values into account and allowing them to be inserted when they didn't mean to, accidentally turning the tree into a list with worse performance, and forgetting to add 1 to the height for the root node. 
+Some common errors that people can make with trees are forgetting to take duplicate values into account and allowing them to be inserted when they didn't mean to, accidentally turning the tree into a list with worse performance, and forgetting to add 1 to the height to provide for the root node. 
 
 ## Efficiency
 
