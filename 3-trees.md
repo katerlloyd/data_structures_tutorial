@@ -34,7 +34,7 @@ A **balanced binary search tree** is when the differences between the height of 
 
 In order to balance this tree using the AVL method, we would need to rotate the offending leaf so that the leaf becomes the parent and the node order is changed. This allows us to have O(log n) performance now that the tree is balanced since the heights are 5 and 4 with a difference of 1 rather than 2. 
 
-1[balanced tree](balanced_tree.png)
+![balanced tree](balanced_tree.png)
 
 ## Recursion
 
