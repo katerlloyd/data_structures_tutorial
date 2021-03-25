@@ -73,7 +73,7 @@ class BST:
         self.root = None
 ```
 
-Now that we have initialized the classes, we can start adding more capabilities to them. We will need two functions to insert data into the BST. Since this is a recursive process we will have a base case of ___.
+Now that we have initialized the classes, we can start adding more capabilities to them. We will need two functions to insert data into the BST. Since this is a recursive process we will have a base case of inserting into the node if the subtree is empty and the smaller problem would be inserting into the left or right subtrees depending on the data value. The `insert()` function inserts the value into the root if the root is empty and calls the recursive `_insert()` function starting at the root.
 
 ```python
     # Inserts the data into the next open node unless the root is empty.
@@ -83,7 +83,11 @@ Now that we have initialized the classes, we can start adding more capabilities 
             self.root = BST.Node(data)
         else:
             self._insert(data, self.root)
+```
 
+The `_insert()` function inserts the data value to the left if it is less than the data value inside of the node and that node is empty, and to the right if the value is greater or equal to the node data value and that node is empty. If an empty node has not yet been found, then the function is called recursively on each subtree until it is found.
+
+```python
     # Locates the next empty node and inserts the data into it.
     def _insert(self, data, node):
         # Data is smaller so goes on the left.
@@ -104,7 +108,7 @@ Now that we have initialized the classes, we can start adding more capabilities 
                 self._insert(data, node.right)
 ```
 
-What kind of errors are common when using the data structure?
+Some common errors that people can make with trees are forgetting to take duplicate values into account and allowing them to be inserted when they didn't mean to, accidentally turning the tree into a list with worse performance, and forgetting to add 1 to the height for the root node. 
 
 ## Efficiency
 
@@ -125,22 +129,22 @@ Recursion is used in these operations to search through each of the subtrees.
 
 We have added a few more alien species to our set since we stopped at another trading post on the way back to Earth. We are going to add all of the species from the set into the binary search tree to display them in alphabetical order. Our boss also asks us if we have any "ashtar" in our group of aliens so he can take some extra precautions before we get back to Earth.
 
-In order to do this we will need to add an interator to our BST class. To accomplish this, we can write two functions: the `__iter__()` function and the `_traverse_forward()` function. The first one overrules the built in Python `__iter__()` function and the second tells it the specifics of what to do. Yield in Python not only returns a value but is also able to remember where it left off with every iteration so it is very valuable when recursing through trees.
+In order to do this we will need to add an interator to our BST class. To accomplish this, we can write two functions: the `__iter__()` function and the `_traverse_forward()` function. The first one overrules the built in Python `__iter__()` function and the second tells it the specifics of what to do. Yield in Python not only returns a value but is also able to remember where it left off with every iteration so it is very valuable when recursing through trees. The base case is to stop if the subtree is empty and the smaller problem is to iterate over the left subtree, then use the current node, and then iterate through the right subtree of that node.
 
 ```python 
-# Iterates forward starting at the root, like in a for loop.
-def __iter__(self):
-    yield from self._traverse_forward(self.root)
+    # Iterates forward starting at the root, like in a for loop.
+    def __iter__(self):
+        yield from self._traverse_forward(self.root)
 
-# Keeps iterating forwared until runs into an empty node.
-def _traverse_forward(self, node):
-    if node is not None:
-        # Returns the left node location.
-        yield from self._traverse_forward(node.left)
-        # Returns the data value.
-        yield node.data
-        # Remembers the right node location.
-        yield from self._traverse_forward(node.right)
+    # Keeps iterating forwared until runs into an empty node.
+    def _traverse_forward(self, node):
+        if node is not None:
+            # Returns the left node location.
+            yield from self._traverse_forward(node.left)
+            # Returns the data value.
+            yield node.data
+            # Remembers the right node location.
+            yield from self._traverse_forward(node.right)
 ```
 
 Now we can display the alien species in order and check to see if "ashtar" is in the group we are bringing back.
