@@ -104,9 +104,9 @@ With the newest model added, we should probably make sure that it is actually in
 
 ```python
 if "V-51 Fox" in rocket_ship_models_set:
-  print("V-51 Fox has been processed correctly." 
+  print("V-51 Fox has been processed correctly.") 
 else:
-  print("V-51 Fox has not been located." 
+  print("V-51 Fox has not been located.") 
 ```
 
 ## Problem to Solve
